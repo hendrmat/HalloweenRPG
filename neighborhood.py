@@ -1,3 +1,5 @@
+from home import Home
+
 class Neighborhood:
   print("Oh no!  Those bad batches of candy turned everyone into monsters!")
   print("What a horrible night to have a curse...")
@@ -8,5 +10,6 @@ class Neighborhood:
   for x in range(0, dimension):
     print("\n")
     for y in range(0, dimension):
-      print("[ ]", end="")
+      Home.createHome()
+      print(" ", end="")
   
