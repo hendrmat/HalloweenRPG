@@ -1,4 +1,6 @@
-from neighborhood import Neighborhood
+#from neighborhood import Neighborhood
+from player import Player
 
 def main():
-  Neighborhood()
+  #Neighborhood()
+  Player.createPlayer()
