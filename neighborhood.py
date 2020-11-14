@@ -1,9 +1,12 @@
 class Neighborhood:
-  def grid():
-    dimension = input("Please select the size of the neighborhood: ")
-    while (dimension < 4):
-      print("Invalid neighborhood size.  Please enter a size between 4 and 10")
-    for i in range(dimension):
-      print("\n")
-    for j in range(dimension):
-      print(" ")
+  print("Oh no!  Those bad batches of candy turned everyone into monsters!")
+  print("What a horrible night to have a curse...")
+  print("\n")
+  dimension = int(input("Input the map size (min 4, max 10): "))
+  while dimension < 4 or dimension > 10:
+    input("Please enter a valid map size (min 4, max 10): ")
+  for x in range(0, dimension):
+    print("\n")
+    for y in range(0, dimension):
+      print("[ ]", end="")
+  
