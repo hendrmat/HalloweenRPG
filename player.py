@@ -10,11 +10,17 @@ class Player(object):
     self.inv_slot = []
 
   def fill_inventory(self):
-    #inv_slot = arr.array('i', [0])
+    hershey = Weapon("Hershey Kisses", 1, 65535)
+    sour = Weapon("Sour Straws", random.uniform(1, 1.75), 2)
+    choco = Weapon("Chocolate Bars", random.uniform(2, 2.4), 4)
+    nerds = Weapon("Nerd Bombs", random.uniform(3.5, 5), 1)
+
+    weapon_index = [[sour.name, sour.uses], [choco.name, choco.uses], [nerds.name, nerds.uses]]
+    
     for i in range(0, 10):
       if i == 0:
-        self.inv_slot.append(0)
+        self.inv_slot.append([hershey.name, hershey.uses])
       else:
-        self.inv_slot.append(random.randint(1, 3))
-      #print(self.inv_slot)
+        self.inv_slot.append(weapon_index[random.randint(0, 2)])
+
   
