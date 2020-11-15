@@ -2,11 +2,11 @@ import random
 
 class NPC(object):
   numNPCs = 0
-  def __init__(self, name, health, attack, npcValue):
+  def __init__(self, name, health, attack, npc_value):
     self.name = name
     self.health = health
     self.attack = attack
-    self.npcValue = npcValue
+    self.npc_value = npc_value
 
 class Person(NPC):
   def __init__(self):
