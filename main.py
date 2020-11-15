@@ -3,4 +3,4 @@ from player import Player
 
 def main():
   #Neighborhood()
-  Player.createPlayer()
+  Player()

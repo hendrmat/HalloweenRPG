@@ -1,6 +1,6 @@
 import random
 
-class Weapon:
+class Weapon(object):
   def __init__(self, name, attack, uses, invValue):
     self.name = name
     self.attack = attack
@@ -8,25 +8,18 @@ class Weapon:
     self.invValue = invValue
 
 class HersheyKisses(Weapon):
-  name = "Hershey Kisses"
-  attack = 1
-  uses = 65535
-  invValue = 0
+  def __init__(self):
+    super().__init__("Hershey Kisses", 1, 65535, 0)
 
 class SourStraws(Weapon):
-  name = "Sour Straws"
-  attack = random.uniform(1, 1.75)
-  uses = 2
-  invValue = 1
+  def __init__(self):
+    super().__init__("Sour Straws", random.uniform(1, 1.75), 2, 1)
 
 class ChocolateBars(Weapon):
-  name = "Chocolate Bars"
-  attack = random.uniform(2, 2.4)
-  uses = 4
-  invValue = 2
-
+  def __init__(self):
+    super().__init__("Chocolate Bars", random.uniform(2, 2.4), 4, 2)
+  
 class NerdBombs(Weapon):
-  name = "Nerd Bombs"
-  attack = random.uniform(3.5, 5)
-  uses = 1
-  invValue = 3
+  def __init__(self):
+    super().__init__("Nerd Bombs", random.uniform(3.5, 5), 1, 3)
+  

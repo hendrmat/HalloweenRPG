@@ -1,38 +1,32 @@
 import random
 
-class NPC:
+class NPC(object):
+  numNPCs = 0
   def __init__(self, name, health, attack, npcValue):
     self.name = name
     self.health = health
     self.attack = attack
     self.npcValue = npcValue
 
-  def Person(NPC):
-    name = "Person"
-    health = 100
-    attack = -1
-    npcValue = 0
+class Person(NPC):
+  def __init__(self):
+    super().__init__("Person", 100, -1, 0)
 
-  def Zombie(NPC):
-    name = "Zombie"
-    health = random.randint(50, 100)
-    attack = random.randint(0, 10)
-    npcValue = 1
+class Zombie(NPC):
+  def __init__(self):
+    super().__init__("Zombie", random.randint(50, 100), 
+    random.randint(0, 10), 1)
 
-  def Vampire(NPC):
-    name = "Vampire"
-    health = random.randint(100-200)
-    attack = random.randint(10-20)
-    npcValue = 2
+class Vampire(NPC):
+  def __init__(self):
+    super().__init__("Vampire", random.randint(100-200), 
+    random.randint(10-20), 2)
 
-  def Ghoul(NPC):
-    name = "Ghoul"
-    health = random.randint(40, 80)
-    attack = random.randint(15, 30)
-    npcValue = 3
-  
-  def Werewolf(NPC):
-    name = "Werewolf"
-    health = 200
-    attack = random.randint(0, 40)
-    npcValue = 4
+class Ghoul(NPC):
+  def __init__(self):
+    super().__init__("Ghoul", random.randint(40, 80), 
+    random.randint(15, 30), 3)
+    
+class Werewolf(NPC):
+  def __init__(self):
+    super().__init__("Werewolf", 200, random.randint(0, 40), 4)

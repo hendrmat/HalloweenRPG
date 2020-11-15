@@ -1,7 +1,7 @@
 from home import Home
 
 class Neighborhood:
-  def __init__(dimension):
+  def __init__(self):
     print("Oh no!  Those bad batches of candy turned everyone into monsters!")
     print("What a horrible night to have a curse...")
     print("\n")
