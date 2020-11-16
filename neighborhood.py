@@ -22,8 +22,9 @@ class Neighborhood():
         if (x == rows - 1 & y == cols - 1):
           grid[y][x] = "P"
         else:
-          house = Home()
-          grid[y][x] = house.create_home()
+          Home()
+          grid[y][x] = "H"
+          #print(grid[y][x])
         #house = Home()
         #monsters = Home.num_npcs
         #house.create_home(monsters)

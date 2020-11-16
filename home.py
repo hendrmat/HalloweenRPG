@@ -6,6 +6,7 @@ class Home(object):
 
   def __init__(self):
     self.monsters = []
+    self.create_home()
 
   def create_home(self):
     
@@ -18,9 +19,7 @@ class Home(object):
     npc_index = [person, zombie, vampire, ghoul, werewolf]
       
     num_npcs = random.randint(0, 10)
-    #for i in range(num_npcs):
-    print(num_npcs)
-    self.monsters.append(num_npcs)
-    
-    
-    
+    for i in range(num_npcs):
+      #print(num_npcs)
+      self.monsters.append(npc_index[random.randint(1, 4)])
+    print(self.monsters)  
