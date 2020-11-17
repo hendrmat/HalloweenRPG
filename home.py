@@ -22,4 +22,4 @@ class Home(object):
     for i in range(num_npcs):
       #print(num_npcs)
       self.monsters.append(npc_index[random.randint(1, 4)])
-    print(self.monsters)  
+    #print(self.monsters)  

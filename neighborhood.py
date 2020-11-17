@@ -3,6 +3,9 @@ import numpy
 
 class Neighborhood():
 
+  def __init__(self):
+    self.create_grid()
+
   def create_grid(self):
 
     print("Oh no!  Those bad batches of candy turned everyone into monsters!")
@@ -11,7 +14,7 @@ class Neighborhood():
     #dimension = int(input("Input the map size (min 4, max 10): "))
     rows = 5
     cols = 5
-    grid = [[0 for i in range(5)] for j in range(5)] 
+    self.grid = [[0 for i in range(5)] for j in range(5)] 
     #while dimension < 4 or dimension > 10:
       #dimension = int(input("Please enter a valid map size (min 4, max 10): "))
   
@@ -20,10 +23,10 @@ class Neighborhood():
       print("\n")
       for y in range(0, cols):
         if (x == rows - 1 & y == cols - 1):
-          grid[y][x] = "P"
+          self.grid[y][x] = "P"
         else:
           Home()
-          grid[y][x] = "H"
+          self.grid[y][x] = "H"
           #print(grid[y][x])
         #house = Home()
         #monsters = Home.num_npcs
@@ -34,5 +37,5 @@ class Neighborhood():
           #print("H", end="")
         #else:
           #print("O", end="")
-    print(numpy.matrix(grid))
+    print(numpy.matrix(self.grid))
   

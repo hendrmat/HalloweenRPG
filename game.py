@@ -9,9 +9,4 @@ class Game:
   hero.fill_inventory()
   hero.move_hero()
 
-  def fight_it_out():
-    command = int(input("Some monsters draw near.  Command?: (select 0 - 9 on your inventory)"))
-    while (command < 0 | command > 9) | hero.uses[command] == 0:
-      command = int(input("Invalid entry or out of uses, please enter 0 - 9 for your command"))
-    hero.uses[command] -= 1
     
